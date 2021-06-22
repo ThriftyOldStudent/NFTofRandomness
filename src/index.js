@@ -20,7 +20,7 @@ const initialize = () => {
     try {
       await ethereum.request({ method: 'eth_requestAccounts' })
       textHead.innerHTML = '<p>Hmmm, looks like you did not have The Thing!</p><p>That Thing is needed!</p><p>If ya know what I mean...</p>'
-      image.style='width: 100%; margin-left: auto; margin-right: auto'
+      image.style = 'width: 100%; margin-left: auto; margin-right: auto'
       image.src = 'unimpressed.jpeg'
     } catch (error) {
       console.error(error)
