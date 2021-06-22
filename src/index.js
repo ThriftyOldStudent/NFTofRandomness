@@ -1,7 +1,6 @@
 import MetaMaskOnboarding from '@metamask/onboarding'
 // eslint-disable-next-line camelcase
 import { ethers } from 'ethers'
-import { hstBytecode, hstAbi, piggybankBytecode, piggybankAbi } from './constants.json'
 
 let ethersProvider
 
