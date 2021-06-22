@@ -9,7 +9,7 @@ const forwarderOrigin = currentUrl.hostname === 'localhost'
   ? 'http://localhost:9010'
   : undefined
 
-const { isMetaMaskInstalled } = MetaMaskOnboarding
+//const { isMetaMaskInstalled } = MetaMaskOnboarding
 const onboardButton = document.getElementById('connectButton')
 
 //const Web3 = require('web3')
