@@ -1,8 +1,7 @@
 import MetaMaskOnboarding from '@metamask/onboarding'
-// eslint-disable-next-line camelcase
-// import { ethers } from 'ethers'
 
-// let ethersProvider
+var textHead = document.getElementById("logo-text");
+var image = document.getElementById("mm-logo");
 
 const currentUrl = new URL(window.location.href)
 const forwarderOrigin = currentUrl.hostname === 'localhost'
@@ -20,6 +19,8 @@ const initialize = () => {
   const onClickConnect = async () => {
     try {
       await ethereum.request({ method: 'eth_requestAccounts' })
+      textHead.innerHTML = "<p>1</p><p>2</p><p>3</p>";
+      image.src = "unimpressed.jpeg";
     } catch (error) {
       console.error(error)
     }
