@@ -9,15 +9,12 @@ const forwarderOrigin = currentUrl.hostname === 'localhost'
   ? 'http://localhost:9010'
   : undefined
 
-//const { isMetaMaskInstalled } = MetaMaskOnboarding
 const onboardButton = document.getElementById('connectButton')
-
 //const Web3 = require('web3')
 // testnet
 //const web3 = new Web3('https://data-seed-prebsc-1-s1.binance.org:8545')
 
 const initialize = () => {
-
   //Created check function to see if the MetaMask extension is installed
   const isMetaMaskInstalled = () => {
     //Have to check the ethereum binding on the window object to see if it's installed
