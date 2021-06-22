@@ -85,16 +85,16 @@ const initialize = async () => {
   try {
     // We must specify the network as 'any' for ethers to allow network changes
     ethersProvider = new ethers.providers.Web3Provider(window.ethereum, 'any')
-    hstFactory = new ethers.ContractFactory(
-      hstAbi,
-      hstBytecode,
-      ethersProvider.getSigner(),
-    )
-    piggybankFactory = new ethers.ContractFactory(
-      piggybankAbi,
-      piggybankBytecode,
-      ethersProvider.getSigner(),
-    )
+    // hstFactory = new ethers.ContractFactory(
+    //   hstAbi,
+    //   hstBytecode,
+    //   ethersProvider.getSigner(),
+    // )
+    // piggybankFactory = new ethers.ContractFactory(
+    //   piggybankAbi,
+    //   piggybankBytecode,
+    //   ethersProvider.getSigner(),
+    // )
   } catch (error) {
     console.error(error)
   }
