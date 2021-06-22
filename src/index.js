@@ -1,6 +1,6 @@
 import MetaMaskOnboarding from '@metamask/onboarding'
 // eslint-disable-next-line camelcase
-import { ethers } from 'ethers'
+// import { ethers } from 'ethers'
 
 // let ethersProvider
 
