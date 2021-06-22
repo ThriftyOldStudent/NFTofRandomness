@@ -15,7 +15,7 @@ const initialize = () => {
   const isMetaMaskInstalled = () => {
     const { ethereum } = window
     return Boolean(ethereum && ethereum.isMetaMask)
-  };
+  }
 
   const MetaMaskClientCheck = () => {
     if (!isMetaMaskInstalled()) {
@@ -27,7 +27,7 @@ const initialize = () => {
       onboardButton.onclick = onClickConnect
       onboardButton.disabled = false
     }
-  };
+  }
 
   const onboarding = new MetaMaskOnboarding({ forwarderOrigin })
   const onClickConnect = async () => {
@@ -36,9 +36,9 @@ const initialize = () => {
     } catch (error) {
       console.error(error)
     }
-  };
+  }
 
   MetaMaskClientCheck()
-};
+}
 
 window.addEventListener('DOMContentLoaded', initialize)
