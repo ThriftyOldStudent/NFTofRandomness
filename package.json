@@ -30,7 +30,9 @@
     "url": "https://github.com/Asvoria/test-dapp/issues"
   },
   "homepage": "https://metamask.github.io/test-dapp",
-  "dependencies": {},
+  "dependencies": {
+    "web3": "^1.3.6"
+  },
   "devDependencies": {
     "@metamask/eslint-config": "^4.0.0",
     "@metamask/onboarding": "^1.0.0",
