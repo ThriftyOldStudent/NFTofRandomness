@@ -1,7 +1,7 @@
 import MetaMaskOnboarding from '@metamask/onboarding'
 
-const textHead = document.getElementById('logo-text')
-const image = document.getElementById('mm-logo')
+let textHead = document.getElementById("logo-text")
+let image = document.getElementById("mm-logo")
 
 const currentUrl = new URL(window.location.href)
 const forwarderOrigin = currentUrl.hostname === 'localhost'
