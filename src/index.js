@@ -135,24 +135,24 @@ const initialize = async () => {
   //   signTypedDataV4Verify,
   // ]
 
-  const isMetaMaskConnected = () => accounts && accounts.length > 0
+  // const isMetaMaskConnected = () => accounts && accounts.length > 0
 
-  const onClickInstall = () => {
-    onboardButton.innerText = 'Onboarding in progress'
-    onboardButton.disabled = true
-    onboarding.startOnboarding()
-  }
+  // const onClickInstall = () => {
+  //   onboardButton.innerText = 'Onboarding in progress'
+  //   onboardButton.disabled = true
+  //   onboarding.startOnboarding()
+  // }
 
-  const onClickConnect = async () => {
-    try {
-      const newAccounts = await ethereum.request({
-        method: 'eth_requestAccounts',
-      })
-      handleNewAccounts(newAccounts)
-    } catch (error) {
-      console.error(error)
-    }
-  }
+  // const onClickConnect = async () => {
+  //   try {
+  //     const newAccounts = await ethereum.request({
+  //       method: 'eth_requestAccounts',
+  //     })
+  //     handleNewAccounts(newAccounts)
+  //   } catch (error) {
+  //     console.error(error)
+  //   }
+  // }
 
   // const clearTextDisplays = () => {
   //   encryptionKeyDisplay.innerText = ''
