@@ -37,6 +37,11 @@ const initialize = () => {
       console.error(error)
     }
   }
+  const onClickInstall = () => {
+    onboardButton.innerText = 'Onboarding in progress';
+    onboardButton.disabled = true;
+    onboarding.startOnboarding();
+  };
 
   MetaMaskClientCheck()
 }
