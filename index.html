@@ -1,7 +1,7 @@
 <html>
   <head>
     <meta charset="UTF-8" />
-    <title>E2E Test Dapp</title>
+    <title>Why you buy this NFT?</title>
     <link rel="icon" type="image/svg" href="metamask-fox.svg" />
     <link
       rel="stylesheet"
@@ -22,12 +22,18 @@
     <main class="container-fluid">
       <header>
         <div id="logo-container">
-          <h1 id="logo-text" class="text-center">E2E Test Dapp</h1>
-
-          <img id="mm-logo" src="metamask-fox.svg" />
+          <h1 id="logo-text" class="text-center">
+            <p>You came here to check out this Amazing NFT?</p>
+            <p>Well, well ,well... Let's show me what you got!</p>
+          </h1>
+          <img
+            id="mm-logo"
+            style="width: 40%; margin-left: auto; margin-right: auto;"
+            src="posh.jpeg"
+          />
         </div>
       </header>
-      <section>
+      <!--section>
         <h3 class="card-title">Status</h3>
 
         <div class="row">
@@ -49,40 +55,40 @@
             </p>
           </div>
         </div>
-      </section>
+      </section-->
 
-      <section>
+      <section id="connect_section">
         <div class="row d-flex justify-content-center">
           <div class="col-xl-4 col-lg-6 col-md-12 col-sm-12 col-12">
             <div class="card">
               <div class="card-body">
-                <h4 class="card-title">Basic Actions</h4>
+                <h4 class="card-title">Show me what you got!</h4>
 
                 <button
                   class="btn btn-primary btn-lg btn-block mb-3"
                   id="connectButton"
                   disabled
                 >
-                  Connect
+                  Connect your wallet!
                 </button>
 
-                <button
+                <!--button
                   class="btn btn-primary btn-lg btn-block mb-3"
                   id="getAccounts"
                 >
                   eth_accounts
-                </button>
+                </button-->
 
-                <p class="info-text alert alert-secondary">
+                <!--p class="info-text alert alert-secondary">
                   eth_accounts result: <span id="getAccountsResult"></span>
-                </p>
+                </p-->
               </div>
             </div>
           </div>
         </div>
       </section>
 
-      <section>
+      <!--section>
         <div class="row d-flex justify-content-center">
           <div class="col-xl-4 col-lg-6 col-md-12 col-sm-12 col-12">
             <div class="card">
@@ -110,9 +116,9 @@
             </div>
           </div>
         </div>
-      </section>
+      </section-->
 
-      <section>
+      <!--section>
         <div class="row">
           <div
             class="
@@ -294,9 +300,9 @@
             </div>
           </div>
         </div>
-      </section>
+      </section-->
 
-      <section>
+      <!--section>
         <div class="row">
           <div
             class="
@@ -482,8 +488,8 @@
             </div>
           </div>
         </div>
-      </section>
-      <section>
+      </section-->
+      <!--section>
         <div class="row d-flex justify-content-center">
           <div class="col-xl-4 col-lg-6 col-md-12 col-sm-12 col-12">
             <div class="card">
@@ -501,7 +507,7 @@
             </div>
           </div>
         </div>
-      </section>
+      </section-->
     </main>
 
     <script src="bundle.js" defer></script>
