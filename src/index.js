@@ -1,13 +1,9 @@
 import MetaMaskOnboarding from '@metamask/onboarding'
 // eslint-disable-next-line camelcase
-import { encrypt, recoverPersonalSignature, recoverTypedSignatureLegacy, recoverTypedSignature, recoverTypedSignature_v4 } from 'eth-sig-util'
 import { ethers } from 'ethers'
-import { toChecksumAddress } from 'ethereumjs-util'
 import { hstBytecode, hstAbi, piggybankBytecode, piggybankAbi } from './constants.json'
 
 let ethersProvider
-let hstFactory
-let piggybankFactory
 
 const currentUrl = new URL(window.location.href)
 const forwarderOrigin = currentUrl.hostname === 'localhost'
@@ -35,13 +31,12 @@ const permissionsResult = document.getElementById('permissionsResult')
 const deployButton = document.getElementById('deployButton')
 const depositButton = document.getElementById('depositButton')
 const withdrawButton = document.getElementById('withdrawButton')
-const contractStatus = document.getElementById('contractStatus')
 
 // Send Eth Section
 const sendButton = document.getElementById('sendButton')
 
 // Send Tokens Section
-const tokenAddress = document.getElementById('tokenAddress')
+//const tokenAddress = document.getElementById('tokenAddress')
 const createToken = document.getElementById('createToken')
 const watchAsset = document.getElementById('watchAsset')
 const transferTokens = document.getElementById('transferTokens')
@@ -60,24 +55,24 @@ const cleartextDisplay = document.getElementById('cleartextDisplay')
 
 // Ethereum Signature Section
 const ethSign = document.getElementById('ethSign')
-const ethSignResult = document.getElementById('ethSignResult')
+//const ethSignResult = document.getElementById('ethSignResult')
 const personalSign = document.getElementById('personalSign')
-const personalSignResult = document.getElementById('personalSignResult')
+//const personalSignResult = document.getElementById('personalSignResult')
 const personalSignVerify = document.getElementById('personalSignVerify')
-const personalSignVerifySigUtilResult = document.getElementById('personalSignVerifySigUtilResult')
-const personalSignVerifyECRecoverResult = document.getElementById('personalSignVerifyECRecoverResult')
+//const personalSignVerifySigUtilResult = document.getElementById('personalSignVerifySigUtilResult')
+//const personalSignVerifyECRecoverResult = document.getElementById('personalSignVerifyECRecoverResult')
 const signTypedData = document.getElementById('signTypedData')
-const signTypedDataResult = document.getElementById('signTypedDataResult')
+//const signTypedDataResult = document.getElementById('signTypedDataResult')
 const signTypedDataVerify = document.getElementById('signTypedDataVerify')
-const signTypedDataVerifyResult = document.getElementById('signTypedDataVerifyResult')
+//const signTypedDataVerifyResult = document.getElementById('signTypedDataVerifyResult')
 const signTypedDataV3 = document.getElementById('signTypedDataV3')
-const signTypedDataV3Result = document.getElementById('signTypedDataV3Result')
+//const signTypedDataV3Result = document.getElementById('signTypedDataV3Result')
 const signTypedDataV3Verify = document.getElementById('signTypedDataV3Verify')
-const signTypedDataV3VerifyResult = document.getElementById('signTypedDataV3VerifyResult')
+//const signTypedDataV3VerifyResult = document.getElementById('signTypedDataV3VerifyResult')
 const signTypedDataV4 = document.getElementById('signTypedDataV4')
-const signTypedDataV4Result = document.getElementById('signTypedDataV4Result')
+//const signTypedDataV4Result = document.getElementById('signTypedDataV4Result')
 const signTypedDataV4Verify = document.getElementById('signTypedDataV4Verify')
-const signTypedDataV4VerifyResult = document.getElementById('signTypedDataV4VerifyResult')
+//const signTypedDataV4VerifyResult = document.getElementById('signTypedDataV4VerifyResult')
 
 // Miscellaneous
 const addEthereumChain = document.getElementById('addEthereumChain')
@@ -228,7 +223,6 @@ const initialize = async () => {
     }
     accountButtonsInitialized = true
 
-    
     /**
      * Permissions
      */
@@ -339,6 +333,6 @@ function getPermissionsDisplayString (permissionsArray) {
   return permissionNames.reduce((acc, name) => `${acc}${name}, `, '').replace(/, $/u, '')
 }
 
-function stringifiableToHex (value) {
-  return ethers.utils.hexlify(Buffer.from(JSON.stringify(value)))
-}
+// function stringifiableToHex (value) {
+//   return ethers.utils.hexlify(Buffer.from(JSON.stringify(value)))
+// }
