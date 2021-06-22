@@ -9,7 +9,7 @@ Currently hosted [here](https://metamask.github.io/test-dapp/).
 If you wish to use this dapp in your e2e tests, install this package and set up a script of e.g. the following form:
 
 ```shell
-static-server node_modules/@metamask/test-dapp/dist --port 9011
+static-server node_modules/@Asvoria/test-dapp/dist --port 9011
 ```
 
 ## Development

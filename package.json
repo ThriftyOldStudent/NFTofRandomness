@@ -1,5 +1,5 @@
 {
-  "name": "@metamask/test-dapp",
+  "name": "@Asvoria/test-dapp",
   "version": "4.0.1",
   "description": "A simple dapp used in MetaMask e2e tests.",
   "engines": {
@@ -19,7 +19,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/MetaMask/test-dapp.git"
+    "url": "git+https://github.com/Asvoria/test-dapp.git"
   },
   "files": [
     "dist/"
@@ -27,7 +27,7 @@
   "author": "MetaMask",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/MetaMask/test-dapp/issues"
+    "url": "https://github.com/Asvoria/test-dapp/issues"
   },
   "homepage": "https://metamask.github.io/test-dapp",
   "dependencies": {},
