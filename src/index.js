@@ -153,54 +153,54 @@ const initialize = async () => {
     }
   }
 
-  const clearTextDisplays = () => {
-    encryptionKeyDisplay.innerText = ''
-    encryptMessageInput.value = ''
-    ciphertextDisplay.innerText = ''
-    cleartextDisplay.innerText = ''
-  }
+  // const clearTextDisplays = () => {
+  //   encryptionKeyDisplay.innerText = ''
+  //   encryptMessageInput.value = ''
+  //   ciphertextDisplay.innerText = ''
+  //   cleartextDisplay.innerText = ''
+  // }
 
-  const updateButtons = () => {
-    const accountButtonsDisabled = !isMetaMaskInstalled() || !isMetaMaskConnected()
-    if (accountButtonsDisabled) {
-      for (const button of accountButtons) {
-        button.disabled = true
-      }
-      clearTextDisplays()
-    } else {
-      deployButton.disabled = false
-      sendButton.disabled = false
-      createToken.disabled = false
-      personalSign.disabled = false
-      signTypedData.disabled = false
-      getEncryptionKeyButton.disabled = false
-      ethSign.disabled = false
-      personalSign.disabled = false
-      signTypedData.disabled = false
-      signTypedDataV3.disabled = false
-      signTypedDataV4.disabled = false
-    }
+  // const updateButtons = () => {
+  //   const accountButtonsDisabled = !isMetaMaskInstalled() || !isMetaMaskConnected()
+  //   if (accountButtonsDisabled) {
+  //     for (const button of accountButtons) {
+  //       button.disabled = true
+  //     }
+  //     clearTextDisplays()
+  //   } else {
+  //     deployButton.disabled = false
+  //     sendButton.disabled = false
+  //     createToken.disabled = false
+  //     personalSign.disabled = false
+  //     signTypedData.disabled = false
+  //     getEncryptionKeyButton.disabled = false
+  //     ethSign.disabled = false
+  //     personalSign.disabled = false
+  //     signTypedData.disabled = false
+  //     signTypedDataV3.disabled = false
+  //     signTypedDataV4.disabled = false
+  //   }
 
-    if (isMetaMaskInstalled()) {
-      addEthereumChain.disabled = false
-    } else {
-      onboardButton.innerText = 'Click here to install MetaMask!'
-      onboardButton.onclick = onClickInstall
-      onboardButton.disabled = false
-    }
+  //   if (isMetaMaskInstalled()) {
+  //     addEthereumChain.disabled = false
+  //   } else {
+  //     onboardButton.innerText = 'Click here to install MetaMask!'
+  //     onboardButton.onclick = onClickInstall
+  //     onboardButton.disabled = false
+  //   }
 
-    if (isMetaMaskConnected()) {
-      onboardButton.innerText = 'Connected'
-      onboardButton.disabled = true
-      if (onboarding) {
-        onboarding.stopOnboarding()
-      }
-    } else {
-      onboardButton.innerText = 'Connect'
-      onboardButton.onclick = onClickConnect
-      onboardButton.disabled = false
-    }
-  }
+  //   if (isMetaMaskConnected()) {
+  //     onboardButton.innerText = 'Connected'
+  //     onboardButton.disabled = true
+  //     if (onboarding) {
+  //       onboarding.stopOnboarding()
+  //     }
+  //   } else {
+  //     onboardButton.innerText = 'Connect'
+  //     onboardButton.onclick = onClickConnect
+  //     onboardButton.disabled = false
+  //   }
+  // }
 
   // addEthereumChain.onclick = async () => {
   //   await ethereum.request({
@@ -226,30 +226,30 @@ const initialize = async () => {
      * Permissions
      */
 
-    requestPermissionsButton.onclick = async () => {
-      try {
-        const permissionsArray = await ethereum.request({
-          method: 'wallet_requestPermissions',
-          params: [{ eth_accounts: {} }],
-        })
-        permissionsResult.innerHTML = getPermissionsDisplayString(permissionsArray)
-      } catch (err) {
-        console.error(err)
-        permissionsResult.innerHTML = `Error: ${err.message}`
-      }
-    }
+    // requestPermissionsButton.onclick = async () => {
+    //   try {
+    //     const permissionsArray = await ethereum.request({
+    //       method: 'wallet_requestPermissions',
+    //       params: [{ eth_accounts: {} }],
+    //     })
+    //     permissionsResult.innerHTML = getPermissionsDisplayString(permissionsArray)
+    //   } catch (err) {
+    //     console.error(err)
+    //     permissionsResult.innerHTML = `Error: ${err.message}`
+    //   }
+    // }
 
-    getPermissionsButton.onclick = async () => {
-      try {
-        const permissionsArray = await ethereum.request({
-          method: 'wallet_getPermissions',
-        })
-        permissionsResult.innerHTML = getPermissionsDisplayString(permissionsArray)
-      } catch (err) {
-        console.error(err)
-        permissionsResult.innerHTML = `Error: ${err.message}`
-      }
-    }
+    // getPermissionsButton.onclick = async () => {
+    //   try {
+    //     const permissionsArray = await ethereum.request({
+    //       method: 'wallet_getPermissions',
+    //     })
+    //     permissionsResult.innerHTML = getPermissionsDisplayString(permissionsArray)
+    //   } catch (err) {
+    //     console.error(err)
+    //     permissionsResult.innerHTML = `Error: ${err.message}`
+    //   }
+    // }
 
     getAccountsButton.onclick = async () => {
       try {
@@ -265,22 +265,22 @@ const initialize = async () => {
     }
   }
 
-  function handleNewAccounts (newAccounts) {
-    accounts = newAccounts
-    accountsDiv.innerHTML = accounts
-    if (isMetaMaskConnected()) {
-      initializeAccountButtons()
-    }
-    updateButtons()
-  }
+  // function handleNewAccounts (newAccounts) {
+  //   accounts = newAccounts
+  //   accountsDiv.innerHTML = accounts
+  //   if (isMetaMaskConnected()) {
+  //     initializeAccountButtons()
+  //   }
+  //   updateButtons()
+  // }
 
-  function handleNewChain (chainId) {
-    chainIdDiv.innerHTML = chainId
-  }
+  // function handleNewChain (chainId) {
+  //   chainIdDiv.innerHTML = chainId
+  // }
 
-  function handleNewNetwork (networkId) {
-    networkDiv.innerHTML = networkId
-  }
+  // function handleNewNetwork (networkId) {
+  //   networkDiv.innerHTML = networkId
+  // }
 
   async function getNetworkAndChainId () {
     try {
