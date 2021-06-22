@@ -13,19 +13,19 @@ const onboardButton = document.getElementById('connectButton')
 
 const initialize = () => {
   const isMetaMaskInstalled = () => {
-    const { ethereum } = window;
-    return Boolean(ethereum && ethereum.isMetaMask);
+    const { ethereum } = window
+    return Boolean(ethereum && ethereum.isMetaMask)
   };
 
   const MetaMaskClientCheck = () => {
     if (!isMetaMaskInstalled()) {
-      onboardButton.innerText = 'Click here to install MetaMask!';
-      onboardButton.onclick = onClickInstall;
-      onboardButton.disabled = false;
+      onboardButton.innerText = 'Click here to install MetaMask!'
+      onboardButton.onclick = onClickInstall
+      onboardButton.disabled = false
     } else {
-      onboardButton.innerText = 'Connect';
-      onboardButton.onclick = onClickConnect;
-      onboardButton.disabled = false;
+      onboardButton.innerText = 'Connect'
+      onboardButton.onclick = onClickConnect
+      onboardButton.disabled = false
     }
   };
 
