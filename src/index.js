@@ -16,19 +16,7 @@ const initialize = () => {
     const { ethereum } = window
     return Boolean(ethereum && ethereum.isMetaMask)
   }
-
-  const MetaMaskClientCheck = () => {
-    if (!isMetaMaskInstalled()) {
-      onboardButton.innerText = 'Click here to install MetaMask!'
-      onboardButton.onclick = onClickInstall
-      onboardButton.disabled = false
-    } else {
-      onboardButton.innerText = 'Connect'
-      onboardButton.onclick = onClickConnect
-      onboardButton.disabled = false
-    }
-  }
-
+  
   const onboarding = new MetaMaskOnboarding({ forwarderOrigin })
   const onClickConnect = async () => {
     try {
@@ -42,6 +30,18 @@ const initialize = () => {
     onboardButton.disabled = true;
     onboarding.startOnboarding();
   };
+
+  const MetaMaskClientCheck = () => {
+    if (!isMetaMaskInstalled()) {
+      onboardButton.innerText = 'Click here to install MetaMask!'
+      onboardButton.onclick = onClickInstall
+      onboardButton.disabled = false
+    } else {
+      onboardButton.innerText = 'Connect'
+      onboardButton.onclick = onClickConnect
+      onboardButton.disabled = false
+    }
+  }
 
   MetaMaskClientCheck()
 }
