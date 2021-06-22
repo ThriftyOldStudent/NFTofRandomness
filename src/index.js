@@ -28,7 +28,7 @@ const initialize = () => {
     onboardButton.innerText = 'Onboarding in progress'
     onboardButton.disabled = true
     onboarding.startOnboarding()
-  };
+  }
 
   const MetaMaskClientCheck = () => {
     if (!isMetaMaskInstalled()) {
