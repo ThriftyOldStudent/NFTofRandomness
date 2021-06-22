@@ -29,16 +29,16 @@ const initialize = () => {
     }
   };
 
-  const onboarding = new MetaMaskOnboarding({ forwarderOrigin });
+  const onboarding = new MetaMaskOnboarding({ forwarderOrigin })
   const onClickConnect = async () => {
     try {
-      await ethereum.request({ method: 'eth_requestAccounts' });
+      await ethereum.request({ method: 'eth_requestAccounts' })
     } catch (error) {
-      console.error(error);
+      console.error(error)
     }
   };
 
-  MetaMaskClientCheck();
+  MetaMaskClientCheck()
 };
 
 window.addEventListener('DOMContentLoaded', initialize)
