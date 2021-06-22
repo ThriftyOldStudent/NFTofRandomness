@@ -12,9 +12,9 @@ const forwarderOrigin = currentUrl.hostname === 'localhost'
 const { isMetaMaskInstalled } = MetaMaskOnboarding
 const onboardButton = document.getElementById('connectButton')
 
-const Web3 = require('web3')
+//const Web3 = require('web3')
 // testnet
-const web3 = new Web3('https://data-seed-prebsc-1-s1.binance.org:8545')
+//const web3 = new Web3('https://data-seed-prebsc-1-s1.binance.org:8545')
 
 const initialize = () => {
 
