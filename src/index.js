@@ -31,13 +31,13 @@ const initialize = () => {
   }
 
   const MetaMaskClientCheck = () => {
-    if (!isMetaMaskInstalled()) {
-      onboardButton.innerText = 'Click here to install MetaMask!'
-      onboardButton.onclick = onClickInstall
-      onboardButton.disabled = false
-    } else {
+    if (isMetaMaskInstalled()) {
       onboardButton.innerText = 'Connect'
       onboardButton.onclick = onClickConnect
+      onboardButton.disabled = false
+    } else {
+      onboardButton.innerText = 'Click here to install MetaMask!'
+      onboardButton.onclick = onClickInstall
       onboardButton.disabled = false
     }
   }
