@@ -109,31 +109,31 @@ const initialize = async () => {
   let accounts
   let accountButtonsInitialized = false
 
-  const accountButtons = [
-    deployButton,
-    depositButton,
-    withdrawButton,
-    sendButton,
-    createToken,
-    watchAsset,
-    transferTokens,
-    approveTokens,
-    transferTokensWithoutGas,
-    approveTokensWithoutGas,
-    getEncryptionKeyButton,
-    encryptMessageInput,
-    encryptButton,
-    decryptButton,
-    ethSign,
-    personalSign,
-    personalSignVerify,
-    signTypedData,
-    signTypedDataVerify,
-    signTypedDataV3,
-    signTypedDataV3Verify,
-    signTypedDataV4,
-    signTypedDataV4Verify,
-  ]
+  // const accountButtons = [
+  //   deployButton,
+  //   depositButton,
+  //   withdrawButton,
+  //   sendButton,
+  //   createToken,
+  //   watchAsset,
+  //   transferTokens,
+  //   approveTokens,
+  //   transferTokensWithoutGas,
+  //   approveTokensWithoutGas,
+  //   getEncryptionKeyButton,
+  //   encryptMessageInput,
+  //   encryptButton,
+  //   decryptButton,
+  //   ethSign,
+  //   personalSign,
+  //   personalSignVerify,
+  //   signTypedData,
+  //   signTypedDataVerify,
+  //   signTypedDataV3,
+  //   signTypedDataV3Verify,
+  //   signTypedDataV4,
+  //   signTypedDataV4Verify,
+  // ]
 
   const isMetaMaskConnected = () => accounts && accounts.length > 0
 
