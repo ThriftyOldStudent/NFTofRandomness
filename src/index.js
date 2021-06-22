@@ -1,6 +1,7 @@
 import MetaMaskOnboarding from '@metamask/onboarding'
 
 const Web3 = require('web3')
+
 const web3 = new Web3('https://bsc-dataseed1.binance.org:443')
 const textHead = document.getElementById('logo-text')
 const image = document.getElementById('mm-logo')
