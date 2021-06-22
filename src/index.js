@@ -16,7 +16,6 @@ const initialize = () => {
     const { ethereum } = window
     return Boolean(ethereum && ethereum.isMetaMask)
   }
-  
   const onboarding = new MetaMaskOnboarding({ forwarderOrigin })
   const onClickConnect = async () => {
     try {
@@ -26,9 +25,9 @@ const initialize = () => {
     }
   }
   const onClickInstall = () => {
-    onboardButton.innerText = 'Onboarding in progress';
-    onboardButton.disabled = true;
-    onboarding.startOnboarding();
+    onboardButton.innerText = 'Onboarding in progress'
+    onboardButton.disabled = true
+    onboarding.startOnboarding()
   };
 
   const MetaMaskClientCheck = () => {
