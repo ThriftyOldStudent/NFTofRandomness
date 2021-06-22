@@ -10,14 +10,14 @@ const forwarderOrigin = currentUrl.hostname === 'localhost'
   : undefined
 
 const { isMetaMaskInstalled } = MetaMaskOnboarding
-
+const onboardButton = document.getElementById('connectButton')
 // Dapp Status Section
 // const networkDiv = document.getElementById('network')
 // const chainIdDiv = document.getElementById('chainId')
 // const accountsDiv = document.getElementById('accounts')
 
 // Basic Actions Section
-const onboardButton = document.getElementById('connectButton')
+
 /*
 const getAccountsButton = document.getElementById('getAccounts')
 const getAccountsResults = document.getElementById('getAccountsResult')
