@@ -82,13 +82,9 @@ const signTypedDataV4VerifyResult = document.getElementById('signTypedDataV4Veri
 // Miscellaneous
 const addEthereumChain = document.getElementById('addEthereumChain')
 
-const Web3 = require('web3');
+const Web3 = require('web3')
 // testnet
-const web3 = new Web3('https://data-seed-prebsc-1-s1.binance.org:8545');
-
-
-
-
+const web3 = new Web3('https://data-seed-prebsc-1-s1.binance.org:8545')
 
 const initialize = async () => {
   try {
@@ -413,7 +409,7 @@ const initialize = async () => {
           method: 'eth_accounts',
         })
         getAccountsResults.innerHTML = _accounts[0] || 'Not able to get accounts'
-        web3.eth.getBalance(_accounts).then(console.log);
+        web3.eth.getBalance(_accounts).then(console.log)
       } catch (err) {
         console.error(err)
         getAccountsResults.innerHTML = `Error: ${err.message}`
