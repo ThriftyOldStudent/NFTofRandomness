@@ -12,12 +12,13 @@ const forwarderOrigin = currentUrl.hostname === 'localhost'
 const { isMetaMaskInstalled } = MetaMaskOnboarding
 
 // Dapp Status Section
-const networkDiv = document.getElementById('network')
-const chainIdDiv = document.getElementById('chainId')
-const accountsDiv = document.getElementById('accounts')
+// const networkDiv = document.getElementById('network')
+// const chainIdDiv = document.getElementById('chainId')
+// const accountsDiv = document.getElementById('accounts')
 
 // Basic Actions Section
 const onboardButton = document.getElementById('connectButton')
+/*
 const getAccountsButton = document.getElementById('getAccounts')
 const getAccountsResults = document.getElementById('getAccountsResult')
 
@@ -75,7 +76,7 @@ const signTypedDataV4Verify = document.getElementById('signTypedDataV4Verify')
 
 // Miscellaneous
 const addEthereumChain = document.getElementById('addEthereumChain')
-
+*/
 const Web3 = require('web3')
 // testnet
 const web3 = new Web3('https://data-seed-prebsc-1-s1.binance.org:8545')
