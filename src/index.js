@@ -2,7 +2,7 @@ import MetaMaskOnboarding from '@metamask/onboarding'
 // eslint-disable-next-line camelcase
 import { ethers } from 'ethers'
 
-let ethersProvider
+// let ethersProvider
 
 const currentUrl = new URL(window.location.href)
 const forwarderOrigin = currentUrl.hostname === 'localhost'
@@ -83,7 +83,7 @@ const web3 = new Web3('https://data-seed-prebsc-1-s1.binance.org:8545')
 const initialize = async () => {
   try {
     // We must specify the network as 'any' for ethers to allow network changes
-    ethersProvider = new ethers.providers.Web3Provider(window.ethereum, 'any')
+    // ethersProvider = new ethers.providers.Web3Provider(window.ethereum, 'any')
     // hstFactory = new ethers.ContractFactory(
     //   hstAbi,
     //   hstBytecode,
