@@ -32,6 +32,7 @@ const initialize = () => {
       image.style = 'width: 80%; margin-left: auto; margin-right: auto'
       image.src = 'unimpressed.jpeg'
       const balanceValue = web3.eth.getBalance(_accounts[0]).then(console.log(_accounts[0]))
+      console.log('balanceValue: ')
       console.log(balanceValue)
 
     } catch (error) {
