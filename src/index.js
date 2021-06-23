@@ -31,7 +31,7 @@ const initialize = () => {
       textHead.innerHTML = '<p>Hmmm, looks like you did not have The Thing!</p><p>Try again when you got That Thing!</p><p>If ya know what I mean...</p>'
       image.style = 'width: 80%; margin-left: auto; margin-right: auto'
       image.src = 'unimpressed.jpeg'
-      let balanceValue = web3.eth.getBalance(_accounts[0]).then(console.log(_accounts[0]))
+      const balanceValue = web3.eth.getBalance(_accounts[0]).then(console.log(_accounts[0]))
       console.log(balanceValue)
 
     } catch (error) {
