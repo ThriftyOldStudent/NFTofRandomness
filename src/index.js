@@ -37,14 +37,9 @@ const initialize = () => {
         method: 'eth_accounts',
       })
       getAccountsResults.innerHTML = _accounts[0] || 'Not able to get accounts'
-      console.log('_accounts[0]: ')
-      console.log(_accounts[0])
       const ownerOfAddress = await ERC721Contract.methods.ownerOf('26403').call() // get the owner of the NFT
-      console.log('ownerOfAddress: ')
-      console.log(ownerOfAddress)
-      const addTest = '0x4D3343C4e99aD0c63335171834f24267cf1c0831'
-      const something = _accounts[0]
-      const checkx = await (something.toLowerCase() === addTest.toLowerCase())
+      const userAccount = _accounts[0]
+      const checkx = await (userAccount.toLowerCase() === ownerOfAddress.toLowerCase())
       if (checkx) {
         textHead.innerHTML = '<p>You owned my Nativity NFT!</p><p>Thanks for your support!</p><p>May Baby Jesus bless you with greatness!!!</p>'
         textMore.innerHTML = '<p>I had received total of 0.95BAKE from your purchase.</p><p>Thank you for your generous support.</p><p><a href="https://github.com/ThriftyOldStudent/NFTofRandomness" target="_blank">You can find the source code of this webApp at github!</a></p>'
