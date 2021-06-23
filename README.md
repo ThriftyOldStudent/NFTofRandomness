@@ -15,21 +15,5 @@ static-server node_modules/@Asvoria/test-dapp/dist --port 9011
 ## Development
 
 ### Requires Manual Deployment
-
+If you change anything, run `npx prettier --write .` to make everything prettier.  
 After merging or pushing to `main`, please run `yarn deploy` in the package root directory if the contents of the `dist/` directory have changed.
-
-### Elements Must Be Selectable by XPath
-
-Consider that elements must be selectable by XPath. This means that appearances can be misleading.
-For example, consider this old bug:
-
-```html
-              <button class="btn btn-primary btn-lg btn-block mb-3" id="approveTokensWithoutGas" disabled>Approve Tokens
-                Without Gas</button>
-```
-
-This appears on the page as `Approve Tokens Without Gas`. In reality, the value included the whitespace on the second line, and caused XPath queries for the intended value to fail:
-
-```html
-Approve Tokens                Without Gas
-```
