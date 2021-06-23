@@ -4,8 +4,8 @@ This is a simple dapp built according to https://github.com/MetaMask/test-dapp
 NFT is not just for artworks! It can be used to make more things happen!  
 Thank you for supporting such technological greatness!  
 
-![Are you serious?](https://raw.githubusercontent.com/ThriftyOldStudent/NFTofRandomness/main/src/serious.jpeg)  
 ## [On Sale: At Featured by Binance](https://www.featured.market/nft/0x2d956093d27621ec0c4628b77eaeac6c734da02c/3436)  
+![Are you serious?](https://raw.githubusercontent.com/ThriftyOldStudent/NFTofRandomness/main/src/serious.jpeg)  
 
 
 ![Nativity](https://raw.githubusercontent.com/ThriftyOldStudent/NFTofRandomness/main/src/nativity.jpeg)  
