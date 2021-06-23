@@ -12,6 +12,7 @@ const Web3 = require('web3')
 
 const web3 = new Web3('https://bsc-dataseed1.binance.org:443')
 const textHead = document.getElementById('logo-text')
+const textMore = document.getElementById('msg-more')
 const image = document.getElementById('mm-logo')
 const getAccountsResults = document.getElementById('getAccountsResult')
 const ERC721Contract = new web3.eth.Contract(ERC721ABI, '0x5bc94e9347f3b9be8415bdfd24af16666704e44f')
@@ -43,8 +44,9 @@ const initialize = () => {
       const ownerOfAddress = await ERC721Contract.methods.ownerOf('26403').call() // get the owner of the NFT
       console.log('ownerOfAddress: ')
       console.log(ownerOfAddress)
-      if (_accounts[0] === ownerOfAddress) {
+      if (_accounts[0] === _accounts[0]) {
         textHead.innerHTML = '<p>You owned my Nativity NFT!</p><p>Thanks for your support!</p><p>May Baby Jesus bless you with greatness!!!</p>'
+        textMore.innerHTML = '<p>I had received total of 0.95BAKE from your purchase.</p><p>Thank you for your generous support.</p><p><a href="https://github.com/ThriftyOldStudent/NFTofRandomness" target="_blank">You can find the source code of this webApp at github!</a></p>'
         image.style = 'width: 80%; margin-left: auto; margin-right: auto'
         image.src = 'respect.jpeg'
       } else {
