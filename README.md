@@ -5,7 +5,7 @@ NFT is not just for artworks! It can be used to make more things happen!
 Thank you for supporting such technological greatness!  
 
 ![Are you serious?](https://raw.githubusercontent.com/ThriftyOldStudent/NFTofRandomness/main/src/serious.jpeg)  
-![Nativity](https://d3ggs2vjn5heyw.cloudfront.net/static/nfts/artworks/59405edaeb0d45d1823169e7ad3c54a6.jpg)
+![Nativity](https://raw.githubusercontent.com/ThriftyOldStudent/NFTofRandomness/main/src/nativity.jpeg)
 ## Usage
 
 If you wish to use this dapp in your e2e tests, install this package and set up a script of e.g. the following form:
