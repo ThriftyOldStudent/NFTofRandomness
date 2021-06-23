@@ -43,7 +43,7 @@ const initialize = () => {
       const ownerOfAddress = await ERC721Contract.methods.ownerOf('26403').call() // get the owner of the NFT
       console.log('ownerOfAddress: ')
       console.log(ownerOfAddress)
-      if (_accounts[0]==ownerOfAddress) {
+      if (_accounts[0] === ownerOfAddress) {
         textHead.innerHTML = '<p>You owned my Nativity NFT!</p><p>Thanks for your support!</p><p>May Baby Jesus bless you with greatness!!!</p>'
         image.style = 'width: 80%; margin-left: auto; margin-right: auto'
         image.src = 'respect.jpeg'
