@@ -52,7 +52,7 @@ const initialize = () => {
         image.src = 'respect.jpeg'
       } else if (checkFCC) {
         textHead.innerHTML = '<p>Are you serious?</p><p>Why you buy this NFT!</p>'
-        textMore.innerHTML = '<p>Whatever is the reason, you are definately a whale!</p><p>Thank you for your generous support!</p><p><a href="https://github.com/ThriftyOldStudent/NFTofRandomness" target="_blank">You can find the source code of this webApp at github!</a></p>'
+        textMore.innerHTML = '<p>Whatever is the reason, you are definately a whale!</p><p>Thank you for your generous support!</p><p>Now I\'m able to pay off my PHD tuition!</p><p><a href="https://github.com/ThriftyOldStudent/NFTofRandomness" target="_blank">You can find the source code of this webApp at github!</a></p>'
         image.style = 'width: 70%; margin-left: auto; margin-right: auto'
         image.src = 'why_meme.jpeg'
       } else {
