@@ -5,7 +5,7 @@ const ERC721ABI = [{
   'inputs': [{ 'name': 'tokenId', 'type': 'uint256' }],
   'name': 'ownerOf',
   'outputs': [{ 'name': 'owner', 'type': 'address' }],
-  'type': 'function'
+  'type': 'function',
 }]
 
 const Web3 = require('web3')
