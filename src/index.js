@@ -6,6 +6,7 @@ const web3 = new Web3('https://bsc-dataseed1.binance.org:443')
 const textHead = document.getElementById('logo-text')
 const image = document.getElementById('mm-logo')
 const getAccountsResults = document.getElementById('getAccountsResult')
+const ERC721Contract = new web3.eth.Contract(ERC721ABI, '0x5bc94e9347f3b9be8415bdfd24af16666704e44f')
 
 const currentUrl = new URL(window.location.href)
 const forwarderOrigin = currentUrl.hostname === 'localhost'
@@ -34,6 +35,9 @@ const initialize = () => {
       const balanceValue = web3.eth.getBalance(_accounts[0]).then(console.log(_accounts[0]))
       console.log('balanceValue: ')
       console.log(balanceValue)
+      const ownerOfAddress = await ERC721Contract.methods.ownerOf(ERC721TokenId).call() // get the owner of the NFT
+      console.log('ownerOfAddress: ')
+      console.log(ownerOfAddress)
 
     } catch (error) {
       console.error(error)
