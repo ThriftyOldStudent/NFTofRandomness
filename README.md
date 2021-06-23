@@ -1,8 +1,8 @@
-# MetaMask Test Dapp
+# Simple dApp to interact with NFT owners
 
-This is a simple test dapp for use in MetaMask e2e tests and manual QA.
-
-Currently hosted [here](https://metamask.github.io/test-dapp/).
+This is a simple dapp built according to https://github.com/MetaMask/test-dapp
+NFT is not just for artworks! It can be used to make more things happen!
+Thank you for supporting such technological greatness!
 
 ## Usage
 
