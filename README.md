@@ -8,7 +8,7 @@ Thank you for supporting such technological greatness!
 ![Are you serious?](https://raw.githubusercontent.com/ThriftyOldStudent/NFTofRandomness/main/src/serious.jpeg)  
 
 
-![Nativity](https://raw.githubusercontent.com/ThriftyOldStudent/NFTofRandomness/main/src/nativity.jpeg)  
+![Nativity](https://raw.githubusercontent.com/ThriftyOldStudent/NFTofRandomness/main/src/nativity.jpg)  
 
 ## Usage
 
