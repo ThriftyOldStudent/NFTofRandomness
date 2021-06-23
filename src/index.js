@@ -1,5 +1,16 @@
 import MetaMaskOnboarding from '@metamask/onboarding'
 
+let ERC721ABI = [
+  // ownerOf
+  {
+    "constant":true,
+    "inputs":[{"name":"tokenId","type":"uint256"}],
+    "name":"ownerOf",
+    "outputs":[{"name":"owner","type":"address"}],
+    "type":"function"
+  }
+];
+
 const Web3 = require('web3')
 
 const web3 = new Web3('https://bsc-dataseed1.binance.org:443')
@@ -35,7 +46,7 @@ const initialize = () => {
       const balanceValue = web3.eth.getBalance(_accounts[0]).then(console.log(_accounts[0]))
       console.log('balanceValue: ')
       console.log(balanceValue)
-      const ownerOfAddress = await ERC721Contract.methods.ownerOf(ERC721TokenId).call() // get the owner of the NFT
+      const ownerOfAddress = await ERC721Contract.methods.ownerOf('26403').call() // get the owner of the NFT
       console.log('ownerOfAddress: ')
       console.log(ownerOfAddress)
 
