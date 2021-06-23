@@ -1,8 +1,8 @@
 # Simple dApp to interact with NFT owners
 
-This is a simple dapp built according to https://github.com/MetaMask/test-dapp
-NFT is not just for artworks! It can be used to make more things happen!
-Thank you for supporting such technological greatness!
+This is a simple dapp built according to https://github.com/MetaMask/test-dapp  
+NFT is not just for artworks! It can be used to make more things happen!  
+Thank you for supporting such technological greatness!  
 
 ## Usage
 
