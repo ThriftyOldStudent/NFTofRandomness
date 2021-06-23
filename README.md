@@ -4,6 +4,8 @@ This is a simple dapp built according to https://github.com/MetaMask/test-dapp
 NFT is not just for artworks! It can be used to make more things happen!  
 Thank you for supporting such technological greatness!  
 
+![Are you serious?](https://raw.githubusercontent.com/ThriftyOldStudent/NFTofRandomness/main/src/serious.jpeg)
+
 ## Usage
 
 If you wish to use this dapp in your e2e tests, install this package and set up a script of e.g. the following form:
