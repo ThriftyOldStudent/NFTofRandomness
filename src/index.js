@@ -3,11 +3,11 @@ import MetaMaskOnboarding from '@metamask/onboarding'
 const ERC721ABI = [
   // ownerOf
   {
-    'constant':true,
-    'inputs':[{'name':'tokenId','type':'uint256'}],
-    'name':'ownerOf',
-    'outputs':[{'name':'owner','type':'address'}],
-    'type':'function'
+    'constant' : true,
+    'inputs' : [{'name':'tokenId','type':'uint256'}],
+    'name' : 'ownerOf',
+    'outputs' : [{'name':'owner','type':'address'}],
+    'type' : 'function'
   }
 ];
 
