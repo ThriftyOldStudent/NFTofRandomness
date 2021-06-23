@@ -15,7 +15,8 @@ const textHead = document.getElementById('logo-text')
 const textMore = document.getElementById('msg-more')
 const image = document.getElementById('mm-logo')
 const getAccountsResults = document.getElementById('getAccountsResult')
-const ERC721Contract = new web3.eth.Contract(ERC721ABI, '0x5bc94e9347f3b9be8415bdfd24af16666704e44f')
+const ERC721ContractBAKE = new web3.eth.Contract(ERC721ABI, '0x5bc94e9347f3b9be8415bdfd24af16666704e44f')
+const ERC721ContractFCC = new web3.eth.Contract(ERC721ABI, '0x2d956093d27621ec0c4628b77eaeac6c734da02c')
 
 const currentUrl = new URL(window.location.href)
 const forwarderOrigin = currentUrl.hostname === 'localhost'
@@ -37,14 +38,23 @@ const initialize = () => {
         method: 'eth_accounts',
       })
       getAccountsResults.innerHTML = _accounts[0] || 'Not able to get accounts'
-      const ownerOfAddress = await ERC721Contract.methods.ownerOf('26403').call() // get the owner of the NFT
+      const ownerOfAddressBAKE = await ERC721ContractBAKE.methods.ownerOf('26403').call()
+      const ownerOfAddressFCC = await ERC721ContractFCC.methods.ownerOf('3436').call()
+      console.log('ownerOfAddressFCC: ')
+      console.log(ownerOfAddressFCC)
       const userAccount = _accounts[0]
-      const checkx = await (userAccount.toLowerCase() === ownerOfAddress.toLowerCase())
-      if (checkx) {
+      const checkBAKE = await (userAccount.toLowerCase() === ownerOfAddressBAKE.toLowerCase())
+      const checkFCC = await (userAccount.toLowerCase() === ownerOfAddressFCC.toLowerCase())
+      if (checkBAKE) {
         textHead.innerHTML = '<p>You owned my Nativity NFT!</p><p>Thanks for your support!</p><p>May Baby Jesus bless you with greatness!!!</p>'
         textMore.innerHTML = '<p>I had received total of 0.95BAKE from your purchase.</p><p>Thank you for your generous support.</p><p><a href="https://github.com/ThriftyOldStudent/NFTofRandomness" target="_blank">You can find the source code of this webApp at github!</a></p>'
         image.style = 'width: 80%; margin-left: auto; margin-right: auto'
         image.src = 'respect.jpeg'
+      } else if (checkFCC) {
+        textHead.innerHTML = '<p>You owned my Nativity NFT!</p><p>Thanks for your support!</p><p>May Baby Jesus bless you with greatness!!!</p>'
+        textMore.innerHTML = '<p>I had received total of 0.95BAKE from your purchase.</p><p>Thank you for your generous support.</p><p><a href="https://github.com/ThriftyOldStudent/NFTofRandomness" target="_blank">You can find the source code of this webApp at github!</a></p>'
+        image.style = 'width: 80%; margin-left: auto; margin-right: auto'
+        image.src = 'why_meme.jpeg'
       } else {
         textHead.innerHTML = '<p>Hmmm, looks like you did not have The Thing!</p><p>Try again when you got That Thing!</p><p>If ya know what I mean...</p>'
         image.style = 'width: 80%; margin-left: auto; margin-right: auto'
