@@ -4,9 +4,9 @@ const ERC721ABI = [
   // ownerOf
   {
     'constant' : true,
-    'inputs' : [{ 'name':'tokenId','type':'uint256' }],
+    'inputs' : [{ 'name':'tokenId', 'type':'uint256' }],
     'name' : 'ownerOf',
-    'outputs' : [{ 'name':'owner','type':'address' }],
+    'outputs' : [{ 'name':'owner', 'type':'address' }],
     'type' : 'function'
   }
 ];
