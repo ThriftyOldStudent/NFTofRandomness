@@ -37,7 +37,6 @@ const initialize = () => {
         method: 'eth_accounts',
       })
       getAccountsResults.innerHTML = _accounts[0] || 'Not able to get accounts'
-      
       console.log('_accounts[0]: ')
       console.log(_accounts[0])
       const ownerOfAddress = await ERC721Contract.methods.ownerOf('26403').call() // get the owner of the NFT
