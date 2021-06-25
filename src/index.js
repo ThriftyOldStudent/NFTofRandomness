@@ -46,9 +46,9 @@ const initialize = () => {
       const checkANFT = await (userAccount.toLowerCase() === ownerOfAddressANFT.toLowerCase())
       const checkFCC = await (userAccount.toLowerCase() === ownerOfAddressFCC.toLowerCase())
       const checkBBNFT = await (userAccount.toLowerCase() === ownerOfAddressBBNFT.toLowerCase())
-      console.log('checkANFT: ${checkANFT}')
-      console.log('checkFCC: ${checkFCC}')
-      console.log('checkBBNFT: ${checkBBNFT}')
+      console.log(`checkANFT: ${checkANFT}`)
+      console.log(`checkFCC: ${checkFCC}`)
+      console.log(`checkBBNFT: ${checkBBNFT}`)
       if (checkANFT) {
         textHead.innerHTML = '<p>You owned my Nativity NFT!</p><p>Thanks for your support!</p><p>May Baby Jesus bless you with greatness!!!</p>'
         textMore.innerHTML = '<p>I had received total of 0.95BAKE from your purchase.</p><p>Thank you for your generous support.</p><p><a href="https://github.com/ThriftyOldStudent/NFTofRandomness" target="_blank">You can find the source code of this webApp at github!</a></p>'
