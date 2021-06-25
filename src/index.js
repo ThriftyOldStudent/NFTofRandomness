@@ -40,11 +40,11 @@ const initialize = () => {
       getAccountsResults.innerHTML = _accounts[0] || 'Not able to get accounts'
       const ownerOfAddressBAKE = await ERC721ContractBAKE.methods.ownerOf('26403').call()
       const ownerOfAddressFCC = await ERC721ContractFCC.methods.ownerOf('3436').call()
-      console.log('ownerOfAddressFCC: ')
-      console.log(ownerOfAddressFCC)
+      const ownerOfAddressBAKE2 = await ERC721ContractBAKE.methods.ownerOf('3436').call()
       const userAccount = _accounts[0]
       const checkBAKE = await (userAccount.toLowerCase() === ownerOfAddressBAKE.toLowerCase())
       const checkFCC = await (userAccount.toLowerCase() === ownerOfAddressFCC.toLowerCase())
+      const checkBAKE2 = await (userAccount.toLowerCase() === ownerOfAddressBAKE2.toLowerCase())
       if (checkBAKE) {
         textHead.innerHTML = '<p>You owned my Nativity NFT!</p><p>Thanks for your support!</p><p>May Baby Jesus bless you with greatness!!!</p>'
         textMore.innerHTML = '<p>I had received total of 0.95BAKE from your purchase.</p><p>Thank you for your generous support.</p><p><a href="https://github.com/ThriftyOldStudent/NFTofRandomness" target="_blank">You can find the source code of this webApp at github!</a></p>'
@@ -55,6 +55,11 @@ const initialize = () => {
         textMore.innerHTML = '<p>Whatever is the reason, you are definately a whale!</p><p>Thank you for your generous support!</p><p>Now I\'m able to pay off my PHD tuition!</p><p><a href="https://github.com/ThriftyOldStudent/NFTofRandomness" target="_blank">You can find the source code of this webApp at github!</a></p>'
         image.style = 'width: 70%; margin-left: auto; margin-right: auto'
         image.src = 'why_meme.jpeg'
+      } else if (checkBAKE2) {
+        textHead.innerHTML = '<p>You owned my Chinese Peony NFT!</p><p>Thanks for your support!</p><p>Now you should learn more about the real NFT!!!</p>'
+        textMore.innerHTML = '<p>It is a form of programmable unique asset!</p><p>Checkout the most basic implementation of this WebApp!</p><p><a href="https://github.com/ThriftyOldStudent/NFTofRandomness" target="_blank">You can find the source code of this webApp at github!</a></p>'
+        image.style = 'width: 80%; margin-left: auto; margin-right: auto'
+        image.src = 'respect.jpeg'
       } else {
         textHead.innerHTML = '<p>Hmmm, looks like you did not have The Thing!</p><p>Try again when you got That Thing!</p><p>If ya know what I mean...</p>'
         image.style = 'width: 80%; margin-left: auto; margin-right: auto'
