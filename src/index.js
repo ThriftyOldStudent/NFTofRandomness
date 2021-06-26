@@ -41,7 +41,7 @@ const initialize = () => {
       getAccountsResults.innerHTML = _accounts[0] || 'Not able to get accounts'
       const ownerOfAddressANFT = await ERC721ContractANFT.methods.ownerOf('26403').call()
       const ownerOfAddressFCC = await ERC721ContractFCC.methods.ownerOf('3436').call()
-      const ownerOfAddressBBNFT = await ERC721ContractBBNFT.methods.ownerOf('665').call()
+      const ownerOfAddressBBNFT = await ERC721ContractBBNFT.methods.ownerOf('3310').call()
       const userAccount = _accounts[0]
       const checkANFT = await (userAccount.toLowerCase() === ownerOfAddressANFT.toLowerCase())
       const checkFCC = await (userAccount.toLowerCase() === ownerOfAddressFCC.toLowerCase())
