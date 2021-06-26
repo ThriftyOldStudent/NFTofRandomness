@@ -42,10 +42,12 @@ const initialize = () => {
       const ownerOfAddressANFT = await ERC721ContractANFT.methods.ownerOf('26403').call()
       const ownerOfAddressFCC = await ERC721ContractFCC.methods.ownerOf('3436').call()
       const ownerOfAddressBBNFT = await ERC721ContractBBNFT.methods.ownerOf('3310').call()
+      const ownerOfTulipMania = await ERC721ContractBBNFT.methods.ownerOf('3435').call()
       const userAccount = _accounts[0]
       const checkANFT = await (userAccount.toLowerCase() === ownerOfAddressANFT.toLowerCase())
       const checkFCC = await (userAccount.toLowerCase() === ownerOfAddressFCC.toLowerCase())
       const checkBBNFT = await (userAccount.toLowerCase() === ownerOfAddressBBNFT.toLowerCase())
+      const checkTulipMania = await (userAccount.toLowerCase() === ownerOfTulipMania.toLowerCase())
       console.log(`checkANFT: ${checkANFT}`)
       console.log(`checkFCC: ${checkFCC}`)
       console.log(`checkBBNFT: ${checkBBNFT}`)
@@ -64,6 +66,11 @@ const initialize = () => {
         textMore.innerHTML = '<p>It is a form of programmable unique asset!</p><p>Checkout the most basic implementation of this WebApp!</p><p><a href="https://github.com/ThriftyOldStudent/NFTofRandomness" target="_blank">You can find the source code of this webApp at github!</a></p>'
         image.style = 'width: 80%; margin-left: auto; margin-right: auto'
         image.src = 'respect.jpeg'
+      } else if (checkTulipMania) {
+        textHead.innerHTML = '<p>You owned my Tulip Mania NFT!</p><p>Why you buy this NFT!</p>Whatever is the reason, you are definately a whale!</p><p>Thank you for your generous support!</p><p>Now I\'m able to pay off my PHD tuition!</p>'
+        textMore.innerHTML = '<p>It is a form of programmable unique asset!</p><p>Checkout the most basic implementation of this WebApp!</p><p><a href="https://github.com/ThriftyOldStudent/NFTofRandomness" target="_blank">You can find the source code of this webApp at github!</a></p>'
+        image.style = 'width: 70%; margin-left: auto; margin-right: auto'
+        image.src = 'why_meme.jpeg'
       } else {
         textHead.innerHTML = '<p>Hmmm, looks like you did not have The Thing!</p><p>Try again when you got That Thing!</p><p>If ya know what I mean...</p>'
         image.style = 'width: 80%; margin-left: auto; margin-right: auto'
