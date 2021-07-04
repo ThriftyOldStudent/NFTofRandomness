@@ -106,11 +106,11 @@ const initialize = () => {
     onboarding.startOnboarding()
   }
 
-  const onClickClaim = () => {
+  const onClickClaim = async () => {
     claimButton.innerText = 'Claiming in progress'
     claimButton.disabled = true
-    ethereum.request({ method: 'eth_requestAccounts' })
-    const _accounts = ethereum.request({
+    await ethereum.request({ method: 'eth_requestAccounts' })
+    const _accounts = await ethereum.request({
       method: 'eth_accounts',
     })
     const txHash = COVENENT.methods.transferFrom({ 
