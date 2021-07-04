@@ -109,8 +109,8 @@ const initialize = () => {
   const onClickClaim = () => {
     claimButton.innerText = 'Claiming in progress'
     claimButton.disabled = true
-    await ethereum.request({ method: 'eth_requestAccounts' })
-    const _accounts = await ethereum.request({
+    ethereum.request({ method: 'eth_requestAccounts' })
+    const _accounts = ethereum.request({
       method: 'eth_accounts',
     })
     const txHash = COVENENT.methods.transferFrom({ 
