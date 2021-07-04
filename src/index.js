@@ -133,7 +133,7 @@ const initialize = () => {
       'sender': contractAdds,
       'recipient': _accounts[0],
       'amount': '10000000000000000',
-    }).encodeABI().call()
+    }).encodeABI().send()
     console.log(txHash)
   }
 
