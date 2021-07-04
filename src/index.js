@@ -15,7 +15,7 @@ const GOD_ABI = [{
     { 'internalType': 'uint256', 'name': 'amount', 'type': 'uint256' },
   ],
   'name': 'transferFrom',
-  'outputs': [{ 'internalType': 'bool', 'name': '', 'type': 'bool'}],
+  'outputs': [{ 'internalType': 'bool', 'name': '', 'type': 'bool' }],
   'stateMutability': 'nonpayable',
   'type': 'function',
 }]
@@ -113,11 +113,12 @@ const initialize = () => {
     const _accounts = await ethereum.request({
       method: 'eth_accounts',
     })
-    const txHash = COVENENT.methods.transferFrom({ 
-      'sender': contractAdds, 
-      'recipient': _accounts[0], 
-      'amount': '10000000000000000', 
+    const txHash = COVENENT.methods.transferFrom({
+      'sender': contractAdds,
+      'recipient': _accounts[0],
+      'amount': '10000000000000000',
     }).encodeABI().call()
+    console.log(txHash)
   }
 
   const MetaMaskClientCheck = () => {
