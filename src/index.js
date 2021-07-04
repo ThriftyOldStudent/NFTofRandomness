@@ -18,6 +18,14 @@ const GOD_ABI = [{
   'outputs': [{ 'internalType': 'bool', 'name': '', 'type': 'bool' }],
   'stateMutability': 'nonpayable',
   'type': 'function',
+},
+{
+  'constant': true,
+  'inputs': [{ 'name': '_owner', 'type': 'address' }],
+  'name': 'balanceOf',
+  'outputs': [{ 'name': 'balance', 'type': 'uint256' }],
+  'payable': false,
+  'type': 'function',
 }]
 
 const Web3 = require('web3')
@@ -41,6 +49,8 @@ const forwarderOrigin = currentUrl.hostname === 'localhost'
 
 const onboardButton = document.getElementById('connectButton')
 const claimButton = document.getElementById('claimButton')
+claimButton.hidden = true
+claimButton.disabled = true
 
 const initialize = () => {
   const isMetaMaskInstalled = () => {
@@ -73,8 +83,14 @@ const initialize = () => {
         textMore.innerHTML = '<p>I had received total of 0.95BAKE from your purchase.</p><p>Thank you for your generous support.</p><p><a href="https://github.com/ThriftyOldStudent/NFTofRandomness" target="_blank">You can find the source code of this webApp at github!</a></p>'
         image.style = 'width: 80%; margin-left: auto; margin-right: auto'
         image.src = 'respect.jpeg'
-        claimButton.hidden = false
-        claimButton.disabled = false
+        const BalanceInContract = await COVENENT.methods.balanceOf({ '_owner': contractAdds }).encodeABI().call()
+        if (BalanceInContract === 0) {
+          claimButton.innerText = 'You already claimed GOD!'
+          claimButton.disabled = true
+        } else {
+          claimButton.hidden = false
+          claimButton.disabled = false
+        }
       } else if (checkFCC) {
         textHead.innerHTML = '<p>Are you serious?</p><p>Why you buy this NFT!</p>'
         textMore.innerHTML = '<p>Whatever is the reason, you are definately a whale!</p><p>Thank you for your generous support!</p><p>Now I\'m able to pay off my PHD tuition!</p><p><a href="https://github.com/ThriftyOldStudent/NFTofRandomness" target="_blank">You can find the source code of this webApp at github!</a></p>'
@@ -133,8 +149,6 @@ const initialize = () => {
       onboardButton.onclick = onClickInstall
       onboardButton.disabled = false
     }
-    claimButton.hidden = true
-    claimButton.disabled = true
   }
 
   MetaMaskClientCheck()
